@@ -1,0 +1,23 @@
+[project]
+name = "screencheck"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "phern", email = "hockkc@gmail.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "pyautogui>=0.9.54",
+    "pydirectinput>=1.0.4",
+    "pynput>=1.8.2",
+    "pywinctl>=0.4.1",
+    "rich>=15.0.0",
+]
+
+[project.scripts]
+screencheck = "screencheck:main"
+
+[build-system]
+requires = ["uv_build>=0.12.13,<0.13.0"]
+build-backend = "uv_build"
