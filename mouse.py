@@ -7,8 +7,6 @@ import time
 DELAY = 1.0
 
 
-def getPoints():
-    return pyautogui.position()
 
 # prints coordinates of mouse continuously
 def reportMousePosition(seconds=10):
@@ -16,7 +14,14 @@ def reportMousePosition(seconds=10):
         print(pyautogui.position())
         time.sleep(DELAY)
         
-def getRegion():
+
+# return point object        
+def getPoint():
+    return pyautogui.position()
+
+
+# listens for mouse, tracks position, returns list of tuples
+def getPoints():
     points = []  
     # callback function to record coordinates
     def on_click(x, y, button, pressed):
@@ -34,11 +39,9 @@ def getRegion():
             else:
                 print("Click to record another point.")
             print(f"\r-----  x: {pos.x}  y: {pos.y}  -----", end="", flush=True)
-            time.sleep(DELAY)
+            time.sleep(0.2)
         listener.join()
     return points
-    
-
 
 
 # send left mouse down and mouse up events
@@ -46,4 +49,3 @@ def useMouseButton(seconds=0.10):
     pydirectinput.mouseDown()
     time.sleep(seconds)
     pydirectinput.mouseUp()
-    time.sleep(DELAY)

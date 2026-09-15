@@ -1,4 +1,5 @@
 import pyautogui
+import mouse
 # import pydirectinput
 import time
 import prints
@@ -6,10 +7,22 @@ import prints
 
 DELAY = 1.00
 
+
+
 def main():
     initPyAutoGUI()
+    prints.welcomeMessage()
+    print("--- Main Menu ---")
+    print("> 1. Select Screen Region")
+    print("> 2. Eyedropper")
+    print("> 3. Exit")
+    print("-----------------")
     
-    
+    selection = input("...")
+    if selection == 1:
+        points = mouse.getPoints()
+        print("1. Average")
+        print("2. Search for RGB")
         
     
 # init pyautogui and enable the failsafe
@@ -17,13 +30,7 @@ def initPyAutoGUI():
     pyautogui.FAILSAFE = True
 
 
-# countdown timer 
-def countdownTimer(seconds): 
-    print("Starting", end="")
-    for i in range(seconds):
-        print(".", end="")
-        time.sleep(DELAY)
-    print("Started")
+
 
 # screenshot a region and
 # iterate over pixels for color_to_find

@@ -1,4 +1,5 @@
 from rich import print
+import time
 
 def welcomeMessage():
     print("[red]-----------------------------------------------------------[/red]")
@@ -11,4 +12,12 @@ def welcomeMessage():
     print("[red]╚═╝        ╚═╝    ╚═════╝ ╚═════╝ ╚══════╝ ╚═════╝ ╚═╝  ╚═╝[/red]")
     print("[orange]-----------------------------------------------------------[/orange]")
     print("[yellow]-----------------------------------------------------------[/yellow]")
+    
 
+# countdown timer 
+def countdownTimer(seconds): 
+    print("Starting", end="")
+    for i in range(seconds):
+        print(".", end="")
+        time.sleep(0.2)
+    print("Started")
