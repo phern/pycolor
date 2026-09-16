@@ -3,8 +3,7 @@ import pyautogui
 import mouse
 import sys
 from rich.console import Console
-# import pydirectinput
-import menu as menu
+import menu
 from data import AppState
 import color
 from rich.prompt import Prompt

@@ -1,11 +1,12 @@
+import time
+
+import pydirectinput
+import pyautogui
 from pynput import mouse
 from rich.live import Live
 from rich.panel import Panel
-from rich.text import Text
+
 import menu as p
-import pydirectinput
-import pyautogui
-import time
 from data import AppState
 
 
@@ -66,10 +67,6 @@ def getPoints(state: AppState, console):
     ):
         while len(state.points) < 2:
             pos = pyautogui.position()
-            if not state.points:
-                live.update("Click to add a point.")
-            else:
-                live.update("Click to record another point.")
             live.update(p.printMousePos(pos))
             #print(f"\r-----  x: {pos.x}  y: {pos.y}  -----", end="", flush=True)
             time.sleep(0.2)
