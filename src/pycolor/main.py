@@ -3,10 +3,10 @@ import pyautogui
 import mouse
 import sys
 from rich.console import Console
-import menu
-from data import AppState
-import color
-from rich.prompt import Prompt
+from pycolor import menu
+from pycolor.data import AppState
+from pycolor import color
+from rich.prompt import Prompt, IntPrompt
 
 
 
@@ -64,17 +64,20 @@ def areaTool(console: Console, state):
 
     # prints location of pixel with user input RGB value
     elif option == "2":
-        state.color = Prompt.ask("RGB Value as tuple (0, 0, 0)")
-        if isinstance(state.color, tuple):
-            rgb_location = color.searchScreenAreaForColor(state.region, tuple(state.color))
+        r = IntPrompt.ask("R Value: ")
+        g = IntPrompt.ask("G Value: ")
+        b = IntPrompt.ask("B Value: ")
+        rgb = (r, g, b)
+        if isinstance(rgb, tuple):
+            rgb_location = color.searchScreenAreaForColor(state.region, rgb)
             if rgb_location:
-                print(f"RGB found at {rgb_location[0]}, {rgb_location[1]}.")
+                console.print(f"RGB found at {rgb_location[0]}, {rgb_location[1]}.")
             else:
-                print("RGB not found.")
+                console.print("RGB not found.")
                 if menu.tryAgain(console):
                     return
         else:
-            print("Not of type tuple.")
+            console.print("Not of type tuple.")
             if menu.tryAgain(console):
                 return
     

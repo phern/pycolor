@@ -6,8 +6,8 @@ from pynput import mouse
 from rich.live import Live
 from rich.panel import Panel
 
-import menu as p
-from data import AppState
+import pycolor.menu as p
+from pycolor.data import AppState
 
 
 
