@@ -8,9 +8,11 @@ authors = [
 ]
 requires-python = ">=3.12"
 dependencies = [
+    "pillow>=12.3.0",
     "pyautogui>=0.9.54",
     "pydirectinput>=1.0.4",
     "pynput>=1.8.2",
+    "pyscreeze>=1.0.1",
     "pywinctl>=0.4.1",
     "rich>=15.0.0",
 ]

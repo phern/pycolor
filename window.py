@@ -24,7 +24,7 @@ def waitForWindow(window_name):
         
         timeout += 1
         if timeout == 1000:
-            print("Game window not found. Exiting...")
+            print("Window not found. Exiting...")
             sys.exit()
             
         time.sleep(0.2)
