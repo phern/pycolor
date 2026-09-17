@@ -4,7 +4,7 @@ version = "0.1.0"
 description = "A lightweight Python color utility"
 readme = "README.md"
 authors = [
-    { name = "phern", email = "hockkc@gmail.com" }
+    { name = "phern" }
 ]
 requires-python = ">=3.12"
 dependencies = [
