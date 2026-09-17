@@ -13,7 +13,7 @@ can be entirely circumvented by simply not injecting into memory at all.
 
 Colorbots rapidly search the screen for a specific color or color pattern and perform an action based on what color was found. If
 the enemy health bar is always red, it could find the location of it on the screen and then move your crosshair
-to a slightly offset location. Pycolor started so I could learn about how colorbots are made without actually cheating.
+to a slightly offset location, like their head. Pycolor started so I could learn about how colorbots are made without actually cheating.
 
    **TL:DR** Pycolor started so I could learn about how these colorbots are made without actually cheating.
 
