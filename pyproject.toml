@@ -1,7 +1,7 @@
 [project]
 name = "pycolor"
 version = "0.1.0"
-description = "Add your description here"
+description = "A lightweight Python color utility"
 readme = "README.md"
 authors = [
     { name = "phern", email = "hockkc@gmail.com" }
