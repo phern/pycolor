@@ -37,7 +37,7 @@ def searchScreenAreaForColor(region: tuple, color_to_find: tuple):
                     abs_x = region[0] + row
                     abs_y = region[1] + col
                     #print(f"RGB found at {abs_x}, {abs_y}")
-                    return tuple(abs_x, abs_y)
+                    return (abs_x, abs_y)
         return False
     except ValueError:
         print("ValueError exception caught while searching for pixel color")
