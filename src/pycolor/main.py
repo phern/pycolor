@@ -10,23 +10,25 @@ from rich.prompt import Prompt, IntPrompt
 
 
 
-DELAY = 1.00
 
-
-
+# initialize pyautogui, instantiate console for Rich, bring up main menu
 def main():
     
     initPyAutoGUI()
     console = Console()
     menu.welcomeMessage(console)
+
+    # call the menu loop and create state dataclass
     controlFlowLoop(console, initState())
     sys.exit()
-    
-    
+
+
+# create the state managing object
 def initState():
     return AppState([], (0,0), (0,0), 0, (0,0), 0.2)
 
-    
+
+# manages user input choices
 def controlFlowLoop(console: Console, state):
     
     # init state object and start the loop
@@ -47,6 +49,7 @@ def controlFlowLoop(console: Console, state):
             enabled = False
     
 
+# takes console and state and 
 def areaTool(console: Console, state):
     
     mouse.getPoints(state, console)
@@ -81,16 +84,12 @@ def areaTool(console: Console, state):
             if menu.tryAgain(console):
                 return
     
-
+# calls getMouseColor and prints results to screen
 def eyeDropper(state, console):
     mouse.getMouseColor(state, console)
     menu.printColorValue(console, state.color)
     if menu.tryAgain(console):
         return
-
-
-
-
 
         
     
