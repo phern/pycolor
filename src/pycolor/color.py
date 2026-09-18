@@ -2,7 +2,7 @@ import pyautogui
 
 
 
-
+# screenshot a region, iterate over each pixel for R, G and B values, combine, average, return
 def averageRgbInRegion(region: tuple):
     screenshot =  pyautogui.screenshot(region=region)
     divisor = screenshot.height * screenshot.width
