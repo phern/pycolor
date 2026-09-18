@@ -11,7 +11,7 @@ import sys
 
 
 
-
+# asci art wee
 def welcomeMessage(console: Console, clear=False):
     if clear:
         console.clear()
@@ -26,7 +26,7 @@ def welcomeMessage(console: Console, clear=False):
     console.print("[orange]-----------------------------------------------------------[/orange]")
     console.print("[yellow]-----------------------------------------------------------[/yellow]")
 
-
+# Rich Table printing inside Rich Panel
 def mainMenu(console: Console):
     table = Table.grid(padding=(0, 2))
 
@@ -55,7 +55,7 @@ def mainMenu(console: Console):
     if selection == "3":
         sys.exit()
 
-
+# Rich Table printing inside Rich Panel
 def areaSubMenu(console: Console):
     table = Table.grid(padding=(0, 2))
 
@@ -85,7 +85,7 @@ def areaSubMenu(console: Console):
         
     
 
-
+# Rich Table printing inside Rich Panel
 def tryAgain(console: Console):
     table = Table.grid(padding=(0, 2))
 
@@ -115,7 +115,7 @@ def tryAgain(console: Console):
     
 
 
-
+# Rich Table printing inside Rich Panel with color of RGB (tuple) parameter
 def printColorValue(console: Console, rgb: tuple):
     r, g, b = rgb
     color = f"rgb({r},{g},{b})"
@@ -137,7 +137,7 @@ def printColorValue(console: Console, rgb: tuple):
         )
     )
 
-
+# Rich panel displaying position and color 
 def printMousePos(pos: tuple, rgb = None):
     if rgb:
         color = f"rgb({rgb[0]},{rgb[1]},{rgb[2]})"
@@ -152,14 +152,3 @@ def printMousePos(pos: tuple, rgb = None):
         padding=(1, 2),
     )
 
-
-
-# countdown timer 
-def countdownTimer(console: Console, seconds, clear=False): 
-    if clear:
-        console.clear()
-    console.print("Starting", end="")
-    for i in range(seconds):
-        console.print(".", end="")
-        time.sleep(0.2)
-    console.print("Started")
