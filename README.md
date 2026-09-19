@@ -62,12 +62,8 @@ Follow the on screen prompts
 
 pycolor is built with Python and several open-source libraries for screen capture, input handling, and terminal presentation.
 
-* **PyAutoGUI** - screenshots, pixel inspection, mouse position, and desktop interaction
-* **PyDirectInput** - direct mouse input
-* **pynput** - mouse event listening
-* **Rich** - terminal menus, prompts, panels, and live output
-* **Pillow** - image representation and pixel-level image processing
-* **PyScreeze** - screenshot-related functionality used by the desktop automation stack
+* **PyAutoGUI** 
+* **Rich** 
 
 Dependency and project management is handled with uv.
 
